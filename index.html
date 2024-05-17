@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/Logo.png">
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>UDC</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img class="backgroundImage" src="assets/bord.png" alt="Game image">
+
+  <nav>
+    <i class="fa-solid fa-rotate-right newGameIcon"></i>
+    <button id="newGame">New game</button>
+    <div class="gameMenu">
+      <div class="gameInfo">
+        <div id="playerOne">Player 1</div>
+
+        <div class="gamePoints">
+          <div id="firstPoint">0</div>
+          <div id="secondPoint">0</div>
+        </div>
+        
+        <div id="playerTwo">Player 2</div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mainC">
+    <div class="gameButtons">
+      <button class="btnRoll">ROLL DICE</button>
+      <button class="btnHold">HOLD</button>
+   </div>
+  </main>
+
+  <div id="dice">
+    <img id="diceImage" src="" alt="Dice image">
+  </div>
+
+  <div class="log">
+    <p id="current">
+      <p id="playerText"></p>
+      <p id="pointText"></p>
+    </p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

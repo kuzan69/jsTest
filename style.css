@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "inira-serif";
+}
+
+body {
+  background-color: #EACAA6;
+}
+
+.backgroundImage {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.newGameIcon {
+  font-size: 2.25rem;
+  color: #333;
+  margin: 10px;
+  display: none;
+}
+
+#newGame {
+  width: 215px;
+  height: 40px;
+  background-color: #63636350;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  margin: 5px 0 0 5px;
+  position: absolute;
+  appearance: none;
+  border: none;
+  transition-duration: .15s;
+}
+
+.gameMenu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gameInfo {
+  width: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+#playerOne,
+#playerTwo {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.gamePoints {
+  display: flex;
+}
+
+#firstPoint,
+#secondPoint {
+  width: 100px;
+  height: 50px;
+  background-color: #FFD08A;
+  border: 2px solid #AE922C;
+  display: grid;
+  place-items: center;
+  font-size: 1.75rem;
+}
+
+.mainC{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gameButtons {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  position: absolute;
+  top: 30%;
+  row-gap: 50px;
+}
+
+.btnRoll,
+.btnHold {
+  font-size: 1.5rem;
+  padding: 15px;
+  border-radius: .75rem;
+  transition-duration: .15s;
+}
+
+.btnRoll{
+  border: none;
+  background-color: #b4420075;
+  width: 240px;
+}
+
+.btnHold{
+  border: none;
+  background-color: #096c0075;
+  width: 230px;
+}
+
+#dice {
+  position: absolute;
+  width: 100%;
+  display: grid;
+  bottom: 25%;
+  justify-content: center;
+}
+
+#diceImage {
+  display: none;
+  width: 65px;
+  border-radius: 7px;
+}
+
+.btnHold:active,
+.btnRoll:active {
+  transform: scale(0.98);
+}
+
+.btnHold:hover {
+  background-color: rgb(0, 117, 29);
+  opacity: 0.9;
+}
+
+.btnRoll:hover{
+  background-color: rgba(138, 53, 4, 0.637);
+  opacity: 0.9;
+}
+
+#newGame:hover {
+  background-color: rgba(73, 73, 73, 0.314);
+  opacity: 0.9;
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.log {
+  /* border: 1px solid black; */
+  height: 125px;
+  width: 300px;
+  margin: auto;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  translate: -50% 50%;
+  background-color: #ffffff20;
+  font-size: 1.25rem;
+  animation-name: log;
+  animation-duration: 2.5s;
+  animation-timing-function: ease;
+  animation-delay: .75s;
+  animation-fill-mode: backwards;
+}
+
+#current {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+}
+
+.player {
+  font-weight: normal;
+  color: #333;
+}
+
+.player.active {
+  font-weight: bold;
+  color: #6200ea;
+}
+
+@keyframes log {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media screen and (max-width: 1200px) {
+  .gameInfo {
+    margin: 75px 0 20px;
+  }
+  #newGame {
+    width: 215px;
+    height: 40px;
+    background-color: #63636350;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    margin: 5px 0 0 5px;
+    position: absolute;
+    appearance: none;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gameInfo {
+    margin: 20px 0;
+  }
+  .newGameIcon {
+    display: block;
+  }
+  #newGame {
+    display: none;
+  }
+  #playerOne,
+  #playerTwo {
+    font-size: 1.25rem;
+  }
+
+  #firstPoint,
+  #secondPoint {
+    width: 75px;
+    height: 35px;
+    background-color: #FFD08A;
+    border: 2px solid #AE922C;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+  }
+}
